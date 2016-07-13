@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+<body>
+<h1>My Contact List({{persons.length}})</h1>
+    <label class="alert alert-success">{{msg}}</label>
+    <div class="row">
+        <div class="col-md-2">
+            <label>
+                Add Person
+                <a class="btn btn-primary" ng-click="showForm()" ng-hide="showAll">+</a>
+                <a class="btn btn-primary" ng-show="showAll" ng-click="hideForm()">-</a>
+            </label>
+        </div>
+    </div>
+        <div class="row">
+            <div class="container">
+                <table class="table table-striped col-md-12">
+                    <tr>
+                        <td><b>Name</b></td>
+                        <td><b>Email Adress</b></td>
+                        <td><b>Action</b></td>
+                    </tr>
+                    <tr ng-repeat="person in persons">
+                        <td><a ng-click="showPerson(person)">{{person.name}}</a></td>
+                        <td>{{person.email}}</td>
+                        <td><a class="btn btn-default" ng-click="showEditForm(person)">Edit</a><a class="btn btn-danger" ng-click="delete(person)">Delete</a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    <div class="row" ng-show="showContact">
+        <div class="panel">
+            <h3>{{myName}}</h3>
+            <ul>
+                <li><strong>Email Address</strong>: {{myEmail}}</li>
+                <li><strong>Phone Number</strong>: {{myPhone}}</li>
+                <h4>Location Info</h4>
+                <li>{{myCountry}}</li>
+                <li>{{myCity}}, {{myZipCode}}</li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <form class="row" ng-show="showAll">
+            <div class="col-md-6">
+                <label>Name: <input type="text" ng-model="name" class="form-control" placeholder="Insert name" required /></label>
+            </div>
+            <div class="col-md-6">
+                <label>Email Adress: <input type="text" ng-model="email" class="form-control" placeholder="Insert email" required /></label>
+            </div>
+            <div class="col-md-6">
+                <label>Phone Number: <input type="text" ng-model="phone" class="form-control" placeholder="Insert phone number" required /></label>
+            </div>
+            <div class="col-md-6">
+                <label>City: <input type="text" ng-model="city" class="form-control" placeholder="Insert city" required /></label>
+            </div>
+            <div class="col-md-6">
+                <label>ZipCode: <input type="text" ng-model="zipcode" class="form-control" placeholder="Insert zip code" required /></label>
+            </div>
+            <div class="col-md-6">
+                <label>Country: <input type="text" ng-model="country" class="form-control" placeholder="Insert country" required /></label>
+            </div>
+            <div class="col-md-6">
+                <input type="submit" class="btn btn-primary" value="Add Person" ng-click="insertPerson()" />
+            </div>
+        </form>
+    </div>
+    <div class="container">
+        <form class="row" ng-show="showAllEdit">
+            <div class="col-md-6">
+                <label>Name: <input type="text" class="form-control" ng-model="myName" /></label>
+            </div>
+            <div class="col-md-6">
+                <label>Email Adress: <input type="text" class="form-control" ng-model="myEmail" /></label>
+            </div>
+            <div class="col-md-6">
+                <label>Phone Number: <input type="text" class="form-control" ng-model="myPhone" /></label>
+            </div>
+            <div class="col-md-6">
+                <label>City: <input type="text" class="form-control" ng-model="myCity" /></label>
+            </div>
+            <div class="col-md-6">
+                <label>ZipCode: <input type="text" class="form-control" ng-model="myZipCode" /></label>
+            </div>
+            <div class="col-md-6">
+                <label>Country: <input type="text" class="form-control" ng-model="myCountry" /></label>
+            </div>
+            <div class="col-md-6">
+                <input type="submit" class="btn btn-primary" ng-click="upgradeContact()" value="Upgrade"/>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
