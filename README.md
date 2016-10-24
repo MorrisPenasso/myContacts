@@ -18,28 +18,4 @@ For more details for how create it, see angular-seed repository and follow steps
  
  Start "npm start" command and call "localhost:8000" from your browser.
 
-
-
-
-![cattura](https://cloud.githubusercontent.com/assets/20413873/16818793/d9e7b04a-4949-11e6-8e18-c5257267aeca.PNG)
-Click + button for show input forms
-
-
-Compile input forms and click "Add Person"
-
-![cattura2](https://cloud.githubusercontent.com/assets/20413873/16818823/fc4e756a-4949-11e6-8d6b-761b07b02ee0.PNG)
-
-
-You have insert new data into your Firebase Database
-
-![cattura3](https://cloud.githubusercontent.com/assets/20413873/16818850/1d05bdb8-494a-11e6-825e-ab5a9af71641.PNG)
-
-
-Click "Edit" button for edit your data and click "Upgrade" button for upgrade your data into database
-
-![cattura4](https://cloud.githubusercontent.com/assets/20413873/16818871/3476ca14-494a-11e6-807b-5c5ac2b0f945.PNG)
-
-
-Click name of person for show his details
-
-![cattura5](https://cloud.githubusercontent.com/assets/20413873/16818922/7093553a-494a-11e6-8a0b-e82351bf7d26.PNG)
+**See the video tutorial from "videoTrailer" directory.**
